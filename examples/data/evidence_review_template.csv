@@ -1,0 +1,1 @@
+doc_id,domain,is_supported,source_anchor_valid,quote_present,extractor_score,independent_extractor_count,independent_source_count,nli_entailment,nli_contradiction,nli_neutral,injection_flag,domain_shift_flag

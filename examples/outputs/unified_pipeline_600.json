@@ -1,0 +1,96 @@
+{
+  "benchmark": "ReliaGraph unified pipeline synthetic 600-document test",
+  "dataset": {
+    "path": "examples/data/synthetic_scale_600.jsonl",
+    "records": 600,
+    "type": "original synthetic multi-domain records",
+    "for_accuracy_claims": false
+  },
+  "configuration": {
+    "topic_embeddings": false,
+    "dense_retrieval": false,
+    "crosslingual_model": false,
+    "GLiNER": false,
+    "spaCy_model": false,
+    "paid_services": false
+  },
+  "initial_ingest_seconds_wall_clock": 5.790654,
+  "initial_stage_timings": {
+    "ingestion": 0.07766929299987169,
+    "topics": 0.5479356519999783,
+    "retrieval_index": 0.006987180000123772,
+    "graph_update": 1.0534611049997693,
+    "reports": 4.095644267000353,
+    "total": 5.790373825999723
+  },
+  "initial_graph": {
+    "documents": 600,
+    "chunks": 600,
+    "topics": 16,
+    "nodes": 480,
+    "edges": 1356,
+    "estimated_graph_bytes": 1019680
+  },
+  "edit_seconds_wall_clock": 4.372351,
+  "edit_stage_timings": {
+    "ingestion": 0.008011633000023721,
+    "topics": 0.0030476830002044153,
+    "retrieval_index": 0.005292047999773786,
+    "graph_update": 0.004145190000144794,
+    "reports": 4.343898542000261,
+    "total": 4.372017047000099
+  },
+  "edit_operation": {
+    "added": 0,
+    "updated": 1,
+    "removed": 0,
+    "unchanged": 0,
+    "duplicates": 0,
+    "errors": [],
+    "new_chunks": 1,
+    "removed_chunks": 1,
+    "injections_blocked": 0,
+    "elapsed_s": 0.008
+  },
+  "delete_seconds_wall_clock": 4.151461,
+  "delete_stage_timings": {
+    "topics": 0.0020440170001165825,
+    "total": 4.151195818999895
+  },
+  "delete_operation": {
+    "added": 0,
+    "updated": 0,
+    "removed": 1,
+    "unchanged": 0,
+    "duplicates": 0,
+    "errors": [],
+    "new_chunks": 0,
+    "removed_chunks": 1,
+    "injections_blocked": 0,
+    "elapsed_s": 0.007
+  },
+  "under_60_seconds_for_full_batch": true,
+  "edit_under_60_seconds": true,
+  "delete_under_60_seconds": true,
+  "audit_chain_full_verification": {
+    "valid": true,
+    "event_count": 602,
+    "problems": [],
+    "full_scan_performed": true,
+    "note": "Hash-chaining detects modification/deletion when the trusted head and audit file are protected; this is not a digital signature."
+  },
+  "final_counts": {
+    "documents": 599,
+    "chunks": 599,
+    "nodes": 481,
+    "edges": 1356
+  },
+  "snapshot_before_update": "snapshot_37175083956069f0becc",
+  "snapshot_after_update": "snapshot_1c94115c1d2c7d74c274",
+  "limitations": [
+    "Original synthetic text only; do not use this to claim cross-domain relation precision.",
+    "No PDF parsing or ML inference in this run; report model load/inference separately.",
+    "Timings are host-specific and must be remeasured on the hackathon laptop.",
+    "Accurate extraction requires an independently human-labelled relation benchmark."
+  ]
+}

@@ -1,0 +1,2 @@
+# Optional local multilingual semantic retrieval. Model weights download on first use.
+sentence-transformers>=3.0,<6

@@ -1,0 +1,13 @@
+id,title,abstract,domain,category
+E001,Solar photovoltaics,Solar photovoltaics convert sunlight into electricity and depend on irradiance and panel orientation.,Energy systems,Generation
+E002,Wind turbines,Wind turbines convert moving air into electrical energy and depend on wind speed.,Energy systems,Generation
+E003,Battery storage,Battery storage balances supply and demand by storing electricity for later use.,Energy systems,Storage
+E004,Smart grids,Smart grids use monitoring and control data to coordinate electricity generation and demand.,Energy systems,Grid management
+E005,Demand response,Demand response shifts electricity consumption to help balance peak demand.,Energy systems,Grid management
+E006,Transmission losses,Transmission losses reduce delivered electricity and depend on network resistance and operating conditions.,Energy systems,Infrastructure
+E007,Energy efficiency,Energy efficiency reduces the energy required to deliver a service or produce a unit of output.,Energy systems,Efficiency
+E008,Hydropower,Hydropower generates electricity from flowing or falling water and depends on water availability.,Energy systems,Generation
+E009,Forecasting,Renewable generation forecasting helps operators plan reserves and grid balancing actions.,Energy systems,Operations
+E010,Microgrids,Microgrids coordinate local generation and loads and can operate with or without the wider grid.,Energy systems,Infrastructure
+E011,Carbon accounting,Carbon accounting records emissions across defined activities and reporting boundaries.,Energy systems,Reporting
+E012,Grid resilience,Grid resilience depends on redundancy, maintenance and recovery procedures after disturbances.,Energy systems,Resilience

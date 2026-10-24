@@ -1,0 +1,6 @@
+# Optional local model support. Not required for the deterministic baseline.
+# These packages may download model weights on first use; run only with permission
+# and enough disk/RAM. Never make model download a runtime hard dependency.
+sentence-transformers>=3.0,<6
+gliner>=0.2.20,<1
+spacy>=3.7,<4

@@ -1,0 +1,13 @@
+id,title,abstract,domain,category
+B001,Cell membrane,The cell membrane controls transport between the cell and its environment.,Biomedical research,Cell biology
+B002,Mitochondria,Mitochondria produce ATP through cellular respiration and support cellular energy needs.,Biomedical research,Cell biology
+B003,Enzymes,Enzymes accelerate biochemical reactions and lower activation energy.,Biomedical research,Biochemistry
+B004,Antibodies,Antibodies bind specific antigens and contribute to immune recognition.,Biomedical research,Immunology
+B005,Vaccines,Vaccines stimulate immune memory and can reduce the risk of severe infectious disease.,Biomedical research,Immunology
+B006,Clinical trials,Clinical trials evaluate the safety and efficacy of interventions in defined participant groups.,Biomedical research,Clinical research
+B007,Randomisation,Randomisation reduces allocation bias and supports balanced comparison between study groups.,Biomedical research,Clinical research
+B008,Peer review,Peer review evaluates methods and evidence before a research article is accepted for publication.,Biomedical research,Research methods
+B009,Sample size,Sample size affects statistical power and the precision of estimated effects.,Biomedical research,Research methods
+B010,Antibiotic resistance,Antibiotic resistance can reduce treatment effectiveness and requires appropriate antimicrobial stewardship.,Biomedical research,Public health
+B011,Data sharing,Data sharing supports replication when privacy and consent requirements are respected.,Biomedical research,Research methods
+B012,Diagnostic tests,Diagnostic tests estimate the likelihood of a condition and must be interpreted with clinical context.,Biomedical research,Diagnostics

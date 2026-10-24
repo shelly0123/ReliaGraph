@@ -1,0 +1,46 @@
+{
+  "title": "ReliaGraph cross-domain relation-extraction smoke benchmark",
+  "notice": "Original benchmark sentences authored for this project. Labels are manually annotated. This small set is a smoke test, not a scientific claim of industry-grade generalization.",
+  "domains": [
+    {
+      "domain": "university_operations",
+      "cases": [
+        {"case_id":"uni_01","text":"The library provides digital resources to students.","gold_triples":[["library","provides","digital resources"]]},
+        {"case_id":"uni_02","text":"The research centre is part of the university.","gold_triples":[["research centre","part of","university"]]},
+        {"case_id":"uni_03","text":"The examination policy requires an identity document.","gold_triples":[["examination policy","requires","identity document"]]},
+        {"case_id":"uni_04","text":"The timetable contains examination dates.","gold_triples":[["timetable","contains","examination dates"]]},
+        {"case_id":"uni_05","text":"No link between the timetable and library resources is specified here.","gold_triples":[]}
+      ]
+    },
+    {
+      "domain": "software_systems",
+      "cases": [
+        {"case_id":"soft_01","text":"The application uses a local database.","gold_triples":[["application","uses","local database"]]},
+        {"case_id":"soft_02","text":"The message queue contains pending events.","gold_triples":[["message queue","contains","pending events"]]},
+        {"case_id":"soft_03","text":"The authentication service requires a valid token.","gold_triples":[["authentication service","requires","valid token"]]},
+        {"case_id":"soft_04","text":"The cache stores recent results.","gold_triples":[["cache","stores","recent results"]]},
+        {"case_id":"soft_05","text":"The source text mentions a database, a token and a cache, but states no relationship between them.","gold_triples":[]}
+      ]
+    },
+    {
+      "domain": "ecology",
+      "cases": [
+        {"case_id":"eco_01","text":"The wetland supports migratory birds.","gold_triples":[["wetland","supports","migratory birds"]]},
+        {"case_id":"eco_02","text":"Excessive runoff causes soil erosion.","gold_triples":[["excessive runoff","causes","soil erosion"]]},
+        {"case_id":"eco_03","text":"The root system absorbs water.","gold_triples":[["root system","absorbs","water"]]},
+        {"case_id":"eco_04","text":"The plant produces oxygen.","gold_triples":[["plant","produces","oxygen"]]},
+        {"case_id":"eco_05","text":"The paragraph names a wetland and a river without claiming that either causes erosion.","gold_triples":[]}
+      ]
+    },
+    {
+      "domain": "laboratory_science",
+      "cases": [
+        {"case_id":"sci_01","text":"The membrane protects the cell.","gold_triples":[["membrane","protects","cell"]]},
+        {"case_id":"sci_02","text":"The sensor measures temperature.","gold_triples":[["sensor","measures","temperature"]]},
+        {"case_id":"sci_03","text":"The experiment produces heat.","gold_triples":[["experiment","produces","heat"]]},
+        {"case_id":"sci_04","text":"The converter converts stored energy into motion.","gold_triples":[["converter","converts","stored energy"]]},
+        {"case_id":"sci_05","text":"The record contains the words sensor, temperature and membrane, but no stated relation.","gold_triples":[]}
+      ]
+    }
+  ]
+}

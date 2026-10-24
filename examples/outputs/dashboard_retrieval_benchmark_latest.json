@@ -1,0 +1,155 @@
+{
+  "dataset_name": "kaggle-energy-sample",
+  "cases_generated": 10,
+  "top_k": 5,
+  "wall_clock_seconds": 0.006,
+  "retrieval_metrics": {
+    "answerable_cases": 8,
+    "hit_rate@5": 0.875,
+    "mrr": 0.875,
+    "per_case": [
+      {
+        "test_id": "re_93030c4951",
+        "kind": "relation",
+        "lang": "en",
+        "gold_chunk_ids": [
+          "c_788eee065e33"
+        ],
+        "retrieved_chunk_ids": [
+          "c_788eee065e33",
+          "c_56cec80f1078",
+          "c_cd91bf0557c2",
+          "c_f3ac3607402c",
+          "c_959f7b6e50bb"
+        ],
+        "hit@5": true,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "test_id": "re_9b1b574261",
+        "kind": "relation",
+        "lang": "en",
+        "gold_chunk_ids": [
+          "c_01eeba48b9a8"
+        ],
+        "retrieved_chunk_ids": [
+          "c_01eeba48b9a8",
+          "c_6b8ca02f8396",
+          "c_5cfa61ecbbac",
+          "c_8ffeaeb1820d",
+          "c_83f4980f1c7e"
+        ],
+        "hit@5": true,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "test_id": "th_bc4dfde9fd",
+        "kind": "thematic",
+        "lang": "en",
+        "gold_chunk_ids": [
+          "c_01eeba48b9a8",
+          "c_0bb6fd4ec1c3",
+          "c_6b8ca02f8396",
+          "c_83f4980f1c7e",
+          "c_9b0bfdfffb13",
+          "c_9f0cb9332b2c",
+          "c_aaa970bfffe3",
+          "c_b181f2b92cdd",
+          "c_c5b297e4ebd7",
+          "c_f08923c9be90"
+        ],
+        "retrieved_chunk_ids": [],
+        "hit@5": false,
+        "reciprocal_rank": 0.0
+      },
+      {
+        "test_id": "cl_e5868dbe82",
+        "kind": "cloze",
+        "lang": "en",
+        "gold_chunk_ids": [
+          "c_83f4980f1c7e"
+        ],
+        "retrieved_chunk_ids": [
+          "c_83f4980f1c7e",
+          "c_5c764eb2a542",
+          "c_b181f2b92cdd",
+          "c_ceb67ad97f50",
+          "c_dbee59cebb07"
+        ],
+        "hit@5": true,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "test_id": "cl_8c95b7aceb",
+        "kind": "cloze",
+        "lang": "en",
+        "gold_chunk_ids": [
+          "c_abc00d4ccf8b"
+        ],
+        "retrieved_chunk_ids": [
+          "c_abc00d4ccf8b",
+          "c_c6729368e7a5",
+          "c_dc440f703e26",
+          "c_d373e3671cb7",
+          "c_5324f5dccf34"
+        ],
+        "hit@5": true,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "test_id": "cl_4d41356444",
+        "kind": "cloze",
+        "lang": "en",
+        "gold_chunk_ids": [
+          "c_5c764eb2a542"
+        ],
+        "retrieved_chunk_ids": [
+          "c_5c764eb2a542",
+          "c_1ff2696c14e8",
+          "c_ceb67ad97f50",
+          "c_dbee59cebb07",
+          "c_13d77b7aaffa"
+        ],
+        "hit@5": true,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "test_id": "cl_7b7b400af6",
+        "kind": "cloze",
+        "lang": "en",
+        "gold_chunk_ids": [
+          "c_9e701b1254d4"
+        ],
+        "retrieved_chunk_ids": [
+          "c_9e701b1254d4",
+          "c_4fa0e3928148",
+          "c_47af1fc87923",
+          "c_a9d544c60fa8",
+          "c_095ccf762163"
+        ],
+        "hit@5": true,
+        "reciprocal_rank": 1.0
+      },
+      {
+        "test_id": "cl_d2143f5400",
+        "kind": "cloze",
+        "lang": "en",
+        "gold_chunk_ids": [
+          "c_a9d544c60fa8"
+        ],
+        "retrieved_chunk_ids": [
+          "c_a9d544c60fa8",
+          "c_4fa0e3928148",
+          "c_9e701b1254d4",
+          "c_f08923c9be90",
+          "c_095ccf762163"
+        ],
+        "hit@5": true,
+        "reciprocal_rank": 1.0
+      }
+    ],
+    "scope_note": "Retrieval-only metrics on provided test cases. Answer accuracy/faithfulness must be evaluated separately with references and an actual answer generator."
+  },
+  "methodology": "Questions are generated from the current corpus; treat scores as an in-corpus smoke test, not a held-out benchmark. For a publishable result, create independent, human-labelled query/supporting-chunk pairs.",
+  "crosslingual": "Not included in this run. Use the dedicated Hindi-English benchmark after enabling and verifying multilingual model weights."
+}

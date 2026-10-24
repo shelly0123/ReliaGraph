@@ -1,0 +1,9 @@
+# Minimal dependencies for the local ReliaGraph dashboard and graph pipeline.
+numpy>=1.26,<3
+scipy>=1.11,<2
+scikit-learn>=1.4,<2
+pypdf>=4.0,<7
+networkx>=3.2,<4
+fastapi>=0.110,<1
+uvicorn>=0.27,<1
+python-multipart>=0.0.9,<1

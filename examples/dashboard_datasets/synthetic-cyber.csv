@@ -1,0 +1,13 @@
+id,title,abstract,domain,category
+C001,Multi-factor authentication,Multi-factor authentication reduces account compromise by adding an independent verification step.,Cybersecurity,Identity
+C002,Access control,Role-based access control limits access to approved resources and protects sensitive information.,Cybersecurity,Identity
+C003,Security logging,Security logging records authentication events and supports incident investigation.,Cybersecurity,Monitoring
+C004,Patch management,Patch management reduces exposure to known vulnerabilities and supports secure system maintenance.,Cybersecurity,Vulnerability management
+C005,Incident response,Incident response follows the documented escalation process and preserves evidence for investigation.,Cybersecurity,Operations
+C006,Data encryption,Data encryption protects confidential records during storage and transmission.,Cybersecurity,Data protection
+C007,Phishing awareness,Phishing awareness training helps users identify suspicious messages and reduces credential theft.,Cybersecurity,Awareness
+C008,Network segmentation,Network segmentation limits lateral movement between sensitive systems and general user networks.,Cybersecurity,Network security
+C009,Backup recovery,Backup recovery requires periodic restoration tests and protects service continuity after data loss.,Cybersecurity,Resilience
+C010,Least privilege,Least privilege limits each account to the resources required for its approved tasks.,Cybersecurity,Identity
+C011,Vulnerability scanning,Vulnerability scanning identifies exposed services and supports prioritised remediation.,Cybersecurity,Vulnerability management
+C012,Audit trails,Audit trails maintain a history of document changes and support accountability.,Cybersecurity,Governance

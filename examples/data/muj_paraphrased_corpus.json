@@ -1,0 +1,495 @@
+{
+  "dataset_id": "topicweave-muj-paraphrased-public-facts-v1",
+  "dataset_title": "ReliaGraph demo corpus: Manipal University Jaipur public information",
+  "created_at": "2026-10-24",
+  "notice": "The statements below are short, independently phrased summaries of public factual information from official MUJ webpages. They are not official MUJ statements, not official policy text, and not endorsed by MUJ. The corpus does not reproduce full webpage passages or images. Follow the linked pages for authoritative current wording and details.",
+  "sources": [
+    {
+      "source_id": "muj-about",
+      "source_title": "About MUJ",
+      "source_url": "https://www.jaipur.manipal.edu/about-muj.php",
+      "accessed_on": "2026-10-24",
+      "use_note": "Used for independently paraphrased facts about the university's multidisciplinary scope and study levels."
+    },
+    {
+      "source_id": "muj-academic-rules",
+      "source_title": "Academic Rules & Regulations - MUJ",
+      "source_url": "https://jaipur.manipal.edu/academic-rules-regulations.php",
+      "accessed_on": "2026-10-24",
+      "use_note": "Used for independently paraphrased facts about the semester system, evaluation and the existence of linked academic policy resources."
+    },
+    {
+      "source_id": "muj-examination",
+      "source_title": "Examination - MUJ",
+      "source_url": "https://jaipur.manipal.edu/examination.php",
+      "accessed_on": "2026-10-24",
+      "use_note": "Used for independently paraphrased assessment categories described on the page."
+    },
+    {
+      "source_id": "muj-home",
+      "source_title": "Manipal University Jaipur official website",
+      "source_url": "https://www.jaipur.manipal.edu/",
+      "accessed_on": "2026-10-24",
+      "use_note": "Used for short paraphrased references to the library, research facilities and collaborations."
+    }
+  ],
+  "known_terms": [
+    "Manipal University Jaipur",
+    "multidisciplinary university",
+    "undergraduate programmes",
+    "postgraduate programmes",
+    "doctoral programmes",
+    "academic offerings",
+    "engineering",
+    "architecture",
+    "management",
+    "law",
+    "semester system",
+    "continuous and comprehensive evaluation",
+    "academic rules and regulations",
+    "policy on plagiarism",
+    "attendance monitoring guidance",
+    "student code of ethics and conduct",
+    "assessment",
+    "class participation",
+    "assignment work",
+    "laboratory work",
+    "class tests",
+    "quizzes",
+    "end-semester examinations",
+    "central library",
+    "research laboratories",
+    "international collaborations",
+    "programmes",
+    "plagiarism",
+    "attendance monitoring",
+    "central library"
+  ],
+  "topics": [
+    {
+      "topic_id": "t-muj-overview",
+      "label": "University overview and academic scope",
+      "keywords": [
+        "university",
+        "programmes",
+        "engineering",
+        "architecture",
+        "management",
+        "law"
+      ],
+      "parent_topic_id": null
+    },
+    {
+      "topic_id": "t-muj-academic-process",
+      "label": "Academic process and guidance",
+      "keywords": [
+        "semester",
+        "evaluation",
+        "academic rules",
+        "plagiarism",
+        "attendance",
+        "conduct"
+      ],
+      "parent_topic_id": null
+    },
+    {
+      "topic_id": "t-muj-assessment",
+      "label": "Assessment and examinations",
+      "keywords": [
+        "assessment",
+        "assignments",
+        "laboratory",
+        "tests",
+        "quizzes",
+        "examinations"
+      ],
+      "parent_topic_id": "t-muj-academic-process"
+    },
+    {
+      "topic_id": "t-muj-research-resources",
+      "label": "Research, library and collaboration",
+      "keywords": [
+        "library",
+        "research",
+        "collaborations"
+      ],
+      "parent_topic_id": null
+    }
+  ],
+  "facts": [
+    {
+      "chunk_id": "muj-about-01",
+      "doc_id": "muj-about",
+      "page": null,
+      "topic_ids": [
+        "t-muj-overview"
+      ],
+      "text": "Manipal University Jaipur is a multidisciplinary university.",
+      "source_id": "muj-about"
+    },
+    {
+      "chunk_id": "muj-about-02",
+      "doc_id": "muj-about",
+      "page": null,
+      "topic_ids": [
+        "t-muj-overview"
+      ],
+      "text": "Manipal University Jaipur offers undergraduate programmes.",
+      "source_id": "muj-about"
+    },
+    {
+      "chunk_id": "muj-about-03",
+      "doc_id": "muj-about",
+      "page": null,
+      "topic_ids": [
+        "t-muj-overview"
+      ],
+      "text": "Manipal University Jaipur offers postgraduate programmes.",
+      "source_id": "muj-about"
+    },
+    {
+      "chunk_id": "muj-about-04",
+      "doc_id": "muj-about",
+      "page": null,
+      "topic_ids": [
+        "t-muj-overview"
+      ],
+      "text": "Manipal University Jaipur offers doctoral programmes.",
+      "source_id": "muj-about"
+    },
+    {
+      "chunk_id": "muj-about-05",
+      "doc_id": "muj-about",
+      "page": null,
+      "topic_ids": [
+        "t-muj-overview"
+      ],
+      "text": "Academic offerings include engineering.",
+      "source_id": "muj-about"
+    },
+    {
+      "chunk_id": "muj-about-06",
+      "doc_id": "muj-about",
+      "page": null,
+      "topic_ids": [
+        "t-muj-overview"
+      ],
+      "text": "Academic offerings include architecture.",
+      "source_id": "muj-about"
+    },
+    {
+      "chunk_id": "muj-about-07",
+      "doc_id": "muj-about",
+      "page": null,
+      "topic_ids": [
+        "t-muj-overview"
+      ],
+      "text": "Academic offerings include management.",
+      "source_id": "muj-about"
+    },
+    {
+      "chunk_id": "muj-about-08",
+      "doc_id": "muj-about",
+      "page": null,
+      "topic_ids": [
+        "t-muj-overview"
+      ],
+      "text": "Academic offerings include law.",
+      "source_id": "muj-about"
+    },
+    {
+      "chunk_id": "muj-academic-01",
+      "doc_id": "muj-academic-rules",
+      "page": null,
+      "topic_ids": [
+        "t-muj-academic-process"
+      ],
+      "text": "Manipal University Jaipur follows a semester system.",
+      "source_id": "muj-academic-rules"
+    },
+    {
+      "chunk_id": "muj-academic-02",
+      "doc_id": "muj-academic-rules",
+      "page": null,
+      "topic_ids": [
+        "t-muj-academic-process"
+      ],
+      "text": "Manipal University Jaipur uses continuous and comprehensive evaluation.",
+      "source_id": "muj-academic-rules"
+    },
+    {
+      "chunk_id": "muj-academic-03",
+      "doc_id": "muj-academic-rules",
+      "page": null,
+      "topic_ids": [
+        "t-muj-academic-process"
+      ],
+      "text": "Academic rules and regulations include a policy on plagiarism.",
+      "source_id": "muj-academic-rules"
+    },
+    {
+      "chunk_id": "muj-academic-04",
+      "doc_id": "muj-academic-rules",
+      "page": null,
+      "topic_ids": [
+        "t-muj-academic-process"
+      ],
+      "text": "Academic rules and regulations include attendance monitoring guidance.",
+      "source_id": "muj-academic-rules"
+    },
+    {
+      "chunk_id": "muj-academic-05",
+      "doc_id": "muj-academic-rules",
+      "page": null,
+      "topic_ids": [
+        "t-muj-academic-process"
+      ],
+      "text": "Academic rules and regulations include a student code of ethics and conduct.",
+      "source_id": "muj-academic-rules"
+    },
+    {
+      "chunk_id": "muj-exam-01",
+      "doc_id": "muj-examination",
+      "page": null,
+      "topic_ids": [
+        "t-muj-assessment"
+      ],
+      "text": "Assessment includes class participation.",
+      "source_id": "muj-examination"
+    },
+    {
+      "chunk_id": "muj-exam-02",
+      "doc_id": "muj-examination",
+      "page": null,
+      "topic_ids": [
+        "t-muj-assessment"
+      ],
+      "text": "Assessment includes assignment work.",
+      "source_id": "muj-examination"
+    },
+    {
+      "chunk_id": "muj-exam-03",
+      "doc_id": "muj-examination",
+      "page": null,
+      "topic_ids": [
+        "t-muj-assessment"
+      ],
+      "text": "Assessment includes laboratory work.",
+      "source_id": "muj-examination"
+    },
+    {
+      "chunk_id": "muj-exam-04",
+      "doc_id": "muj-examination",
+      "page": null,
+      "topic_ids": [
+        "t-muj-assessment"
+      ],
+      "text": "Assessment includes class tests.",
+      "source_id": "muj-examination"
+    },
+    {
+      "chunk_id": "muj-exam-05",
+      "doc_id": "muj-examination",
+      "page": null,
+      "topic_ids": [
+        "t-muj-assessment"
+      ],
+      "text": "Assessment includes quizzes.",
+      "source_id": "muj-examination"
+    },
+    {
+      "chunk_id": "muj-exam-06",
+      "doc_id": "muj-examination",
+      "page": null,
+      "topic_ids": [
+        "t-muj-assessment"
+      ],
+      "text": "Assessment includes end-semester examinations.",
+      "source_id": "muj-examination"
+    },
+    {
+      "chunk_id": "muj-home-01",
+      "doc_id": "muj-home",
+      "page": null,
+      "topic_ids": [
+        "t-muj-research-resources"
+      ],
+      "text": "Manipal University Jaipur has a central library.",
+      "source_id": "muj-home"
+    },
+    {
+      "chunk_id": "muj-home-02",
+      "doc_id": "muj-home",
+      "page": null,
+      "topic_ids": [
+        "t-muj-research-resources"
+      ],
+      "text": "Manipal University Jaipur has research laboratories.",
+      "source_id": "muj-home"
+    },
+    {
+      "chunk_id": "muj-home-03",
+      "doc_id": "muj-home",
+      "page": null,
+      "topic_ids": [
+        "t-muj-research-resources"
+      ],
+      "text": "Manipal University Jaipur supports international collaborations.",
+      "source_id": "muj-home"
+    }
+  ],
+  "gold_edges": [
+    {
+      "subject": "Manipal University Jaipur",
+      "relation_type": "is_a",
+      "object": "multidisciplinary university",
+      "chunk_id": "muj-about-01"
+    },
+    {
+      "subject": "Manipal University Jaipur",
+      "relation_type": "offers",
+      "object": "undergraduate programmes",
+      "chunk_id": "muj-about-02"
+    },
+    {
+      "subject": "Manipal University Jaipur",
+      "relation_type": "offers",
+      "object": "postgraduate programmes",
+      "chunk_id": "muj-about-03"
+    },
+    {
+      "subject": "Manipal University Jaipur",
+      "relation_type": "offers",
+      "object": "doctoral programmes",
+      "chunk_id": "muj-about-04"
+    },
+    {
+      "subject": "Academic offerings",
+      "relation_type": "includes",
+      "object": "engineering",
+      "chunk_id": "muj-about-05"
+    },
+    {
+      "subject": "Academic offerings",
+      "relation_type": "includes",
+      "object": "architecture",
+      "chunk_id": "muj-about-06"
+    },
+    {
+      "subject": "Academic offerings",
+      "relation_type": "includes",
+      "object": "management",
+      "chunk_id": "muj-about-07"
+    },
+    {
+      "subject": "Academic offerings",
+      "relation_type": "includes",
+      "object": "law",
+      "chunk_id": "muj-about-08"
+    },
+    {
+      "subject": "Manipal University Jaipur",
+      "relation_type": "follows",
+      "object": "semester system",
+      "chunk_id": "muj-academic-01"
+    },
+    {
+      "subject": "Manipal University Jaipur",
+      "relation_type": "uses",
+      "object": "continuous and comprehensive evaluation",
+      "chunk_id": "muj-academic-02"
+    },
+    {
+      "subject": "Academic rules and regulations",
+      "relation_type": "includes",
+      "object": "policy on plagiarism",
+      "chunk_id": "muj-academic-03"
+    },
+    {
+      "subject": "Academic rules and regulations",
+      "relation_type": "includes",
+      "object": "attendance monitoring guidance",
+      "chunk_id": "muj-academic-04"
+    },
+    {
+      "subject": "Academic rules and regulations",
+      "relation_type": "includes",
+      "object": "student code of ethics and conduct",
+      "chunk_id": "muj-academic-05"
+    },
+    {
+      "subject": "Assessment",
+      "relation_type": "includes",
+      "object": "class participation",
+      "chunk_id": "muj-exam-01"
+    },
+    {
+      "subject": "Assessment",
+      "relation_type": "includes",
+      "object": "assignment work",
+      "chunk_id": "muj-exam-02"
+    },
+    {
+      "subject": "Assessment",
+      "relation_type": "includes",
+      "object": "laboratory work",
+      "chunk_id": "muj-exam-03"
+    },
+    {
+      "subject": "Assessment",
+      "relation_type": "includes",
+      "object": "class tests",
+      "chunk_id": "muj-exam-04"
+    },
+    {
+      "subject": "Assessment",
+      "relation_type": "includes",
+      "object": "quizzes",
+      "chunk_id": "muj-exam-05"
+    },
+    {
+      "subject": "Assessment",
+      "relation_type": "includes",
+      "object": "end-semester examinations",
+      "chunk_id": "muj-exam-06"
+    },
+    {
+      "subject": "Manipal University Jaipur",
+      "relation_type": "has",
+      "object": "central library",
+      "chunk_id": "muj-home-01"
+    },
+    {
+      "subject": "Manipal University Jaipur",
+      "relation_type": "has",
+      "object": "research laboratories",
+      "chunk_id": "muj-home-02"
+    },
+    {
+      "subject": "Manipal University Jaipur",
+      "relation_type": "enables",
+      "object": "international collaborations",
+      "chunk_id": "muj-home-03"
+    }
+  ],
+  "negative_test_contexts": [
+    {
+      "test_id": "neg-cooccurrence-01",
+      "text": "Manipal University Jaipur and the central library are mentioned here, but this sentence does not state a relationship between them.",
+      "expected_relation_count": 0,
+      "purpose": "Co-occurrence without an explicit relation must not create an edge."
+    },
+    {
+      "test_id": "neg-cooccurrence-02",
+      "text": "Engineering, architecture and management are mentioned as separate terms; no relationship is asserted in this test sentence.",
+      "expected_relation_count": 0,
+      "purpose": "A list of entities without a relation cue should not create a relation."
+    },
+    {
+      "test_id": "neg-cooccurrence-03",
+      "text": "The words plagiarism and attendance monitoring occur in this test sentence without a claim that one includes or requires the other.",
+      "expected_relation_count": 0,
+      "purpose": "Related domain vocabulary alone must not be interpreted as a relation."
+    }
+  ]
+}

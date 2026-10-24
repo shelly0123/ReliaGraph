@@ -1,0 +1,413 @@
+{
+  "title": "ReliaGraph dashboard acceptance smoke test",
+  "timestamp_utc": "2026-10-24T18:01:46Z",
+  "python": "3.13.5",
+  "mode": "deterministic baseline; optional ML models disabled",
+  "data_dir": "temporary isolated directory (removed by the OS later)",
+  "external_kaggle_data": "Full Kaggle datasets were not downloaded because external DNS resolution failed. One clearly attributed 20-row excerpt was transcribed from a public CSV mirror and imported through the dashboard API.",
+  "synthetic_fixtures_are_kaggle_data": false,
+  "kaggle_full_dataset_downloaded": false,
+  "operations": [
+    {
+      "operation": "load_synthetic_fixture",
+      "dataset": "synthetic-cyber",
+      "dataset_origin": "original synthetic project fixture, not Kaggle",
+      "records": 12,
+      "pipeline_wall_seconds": 0.16,
+      "api_request_seconds": 0.16477,
+      "nodes": 25,
+      "edges": 33,
+      "topics": 3,
+      "under_60_seconds": true
+    },
+    {
+      "operation": "load_synthetic_fixture",
+      "dataset": "synthetic-biomed",
+      "dataset_origin": "original synthetic project fixture, not Kaggle",
+      "records": 12,
+      "pipeline_wall_seconds": 0.168,
+      "api_request_seconds": 0.17264,
+      "nodes": 39,
+      "edges": 54,
+      "topics": 3,
+      "under_60_seconds": true
+    },
+    {
+      "operation": "load_synthetic_fixture",
+      "dataset": "synthetic-energy",
+      "dataset_origin": "original synthetic project fixture, not Kaggle",
+      "records": 12,
+      "pipeline_wall_seconds": 0.1865,
+      "api_request_seconds": 0.19055,
+      "nodes": 57,
+      "edges": 81,
+      "topics": 3,
+      "under_60_seconds": true
+    },
+    {
+      "operation": "load_kaggle_derived_energy_excerpt",
+      "dataset_origin": "20 selected rows/four columns transcribed from the public CSV mirror of the Kaggle Global Data on Sustainable Energy dataset; CC BY 4.0; not the full file",
+      "source_url": "https://www.kaggle.com/datasets/anshtanwar/global-data-on-sustainable-energy",
+      "source_mirror_url": "https://github.com/AnshTanwar/Global-Data-on-Sustainable-Energy",
+      "license": "CC BY 4.0; excerpt adapted by selecting rows and columns",
+      "records": 20,
+      "pipeline_wall_seconds": 0.2341,
+      "api_request_seconds": 0.2387,
+      "nodes": 59,
+      "edges": 81,
+      "topics": 5,
+      "under_60_seconds": true,
+      "source_attribution": "Kaggle-derived 20-row selected-column excerpt from Global Data on Sustainable Energy; dataset page: https://www.kaggle.com/datasets/anshtanwar/global-data-on-sustainable-energy; CC BY 4.0; adapted by selecting 20 country-year rows and 4 indicator columns. Source rows were inspected via the public CSV mirror; this is not the full downloaded source file."
+    },
+    {
+      "operation": "upload_600_record_scale_fixture_via_dashboard_api",
+      "dataset_origin": "original synthetic scale fixture; not Kaggle and not used for accuracy claims",
+      "records": 600,
+      "pipeline_wall_seconds": 5.417,
+      "api_request_seconds": 5.48178,
+      "nodes": 979,
+      "edges": 1437,
+      "topics": 21,
+      "under_60_seconds": true
+    },
+    {
+      "operation": "upload_kaggle_shaped_csv",
+      "dataset_origin": "project-authored CSV fixture with Kaggle URL metadata; not a downloaded Kaggle file",
+      "records": 3,
+      "pipeline_wall_seconds": 3.6525,
+      "api_request_seconds": 3.71022,
+      "under_60_seconds": true
+    },
+    {
+      "operation": "reimport_shorter_csv_edit",
+      "records": 2,
+      "stale_records_removed": 1,
+      "pipeline_wall_seconds": 5.1724,
+      "api_request_seconds": 5.24088,
+      "under_60_seconds": true
+    },
+    {
+      "operation": "upload_zip_jsonl_and_text",
+      "records": 3,
+      "pipeline_wall_seconds": 3.2742,
+      "api_request_seconds": 3.33804,
+      "under_60_seconds": true
+    },
+    {
+      "operation": "upload_pdf_markdown_json_ndjson",
+      "dataset_origin": "bundled original synthetic sample files; not Kaggle",
+      "file_count": 4,
+      "records": 5,
+      "file_manifest": [
+        {
+          "file": "synthetic-lab-notes.pdf",
+          "kind": "document",
+          "bytes": 1658,
+          "records_created": 1
+        },
+        {
+          "file": "operator-notes.md",
+          "kind": "document",
+          "bytes": 86,
+          "records_created": 1
+        },
+        {
+          "file": "research-records.json",
+          "kind": "tabular",
+          "rows_seen": 2,
+          "records_created": 2
+        },
+        {
+          "file": "events.ndjson",
+          "kind": "tabular",
+          "rows_seen": 1,
+          "records_created": 1
+        }
+      ],
+      "pipeline_wall_seconds": 3.5404,
+      "api_request_seconds": 3.59841,
+      "under_60_seconds": true
+    }
+  ],
+  "queries": [
+    {
+      "query": "What are the key themes across the documents?",
+      "http_status": 200,
+      "api_request_seconds": 0.03345,
+      "engine_latency_seconds": 0.028801,
+      "route": "thematic",
+      "hits": 8,
+      "topic_summaries": 8,
+      "graph_paths": 5,
+      "abstained": false
+    },
+    {
+      "query": "What is access control?",
+      "http_status": 200,
+      "api_request_seconds": 0.00489,
+      "engine_latency_seconds": 0.002052,
+      "route": "factual",
+      "hits": 5,
+      "topic_summaries": 0,
+      "graph_paths": 0,
+      "abstained": false
+    },
+    {
+      "query": "How are identity and security logging related?",
+      "http_status": 200,
+      "api_request_seconds": 0.01273,
+      "engine_latency_seconds": 0.006132,
+      "route": "relation_chain",
+      "hits": 5,
+      "topic_summaries": 0,
+      "graph_paths": 4,
+      "abstained": false
+    }
+  ],
+  "security_checks": {
+    "unauthenticated_dashboard_blocked": true,
+    "unauthenticated_dashboard_http_seconds": 0.00579,
+    "first_run_account_setup": true,
+    "setup_http_seconds": 0.05278,
+    "missing_csrf_blocked_mutation": true,
+    "logout_revokes_session": true
+  },
+  "workspace_after_fixtures": {
+    "api_request_seconds": 0.33758,
+    "document_records": 656,
+    "nodes": 979,
+    "edges": 1437,
+    "topics": 21
+  },
+  "retrieval_smoke_test": {
+    "dataset_name": "Acceptance multi-format files",
+    "cases_generated": 10,
+    "top_k": 5,
+    "wall_clock_seconds": 0.0242,
+    "retrieval_metrics": {
+      "answerable_cases": 8,
+      "hit_rate@5": 0.75,
+      "mrr": 0.75,
+      "per_case": [
+        {
+          "test_id": "re_6719d710b4",
+          "kind": "relation",
+          "lang": "en",
+          "gold_chunk_ids": [
+            "c_856b817f2a90"
+          ],
+          "retrieved_chunk_ids": [
+            "c_856b817f2a90",
+            "c_5e851ddd4d57",
+            "c_ed6aa25d7cef",
+            "c_accf1324afbe",
+            "c_eab1061f749e"
+          ],
+          "hit@5": true,
+          "reciprocal_rank": 1.0
+        },
+        {
+          "test_id": "re_a2dd82e40b",
+          "kind": "relation",
+          "lang": "en",
+          "gold_chunk_ids": [
+            "c_c6b470b65df6"
+          ],
+          "retrieved_chunk_ids": [
+            "c_c6b470b65df6",
+            "c_9ce977a75ea2",
+            "c_b449b160b3f1",
+            "c_32bddfadae44",
+            "c_4cdf11e75d43"
+          ],
+          "hit@5": true,
+          "reciprocal_rank": 1.0
+        },
+        {
+          "test_id": "mu_d02a6a3cef",
+          "kind": "multi_hop",
+          "lang": "en",
+          "gold_chunk_ids": [
+            "c_6a7d8e28f332"
+          ],
+          "retrieved_chunk_ids": [
+            "c_62e721a446aa",
+            "c_35a20aadfc7d",
+            "c_61a03bdf0361",
+            "c_865b1d192b69",
+            "c_e3b475437921"
+          ],
+          "hit@5": false,
+          "reciprocal_rank": 0.0
+        },
+        {
+          "test_id": "th_af68f6b458",
+          "kind": "thematic",
+          "lang": "en",
+          "gold_chunk_ids": [
+            "c_44eb00984b88",
+            "c_61a03bdf0361",
+            "c_62e721a446aa",
+            "c_97cd0ee08700",
+            "c_9a712e8d2d46",
+            "c_9ce977a75ea2",
+            "c_a6adf22bb6af",
+            "c_bbfb8be23714",
+            "c_c379e685abea",
+            "c_fa5a354e06a5"
+          ],
+          "retrieved_chunk_ids": [],
+          "hit@5": false,
+          "reciprocal_rank": 0.0
+        },
+        {
+          "test_id": "cl_a70f883381",
+          "kind": "cloze",
+          "lang": "en",
+          "gold_chunk_ids": [
+            "c_cb0e6a5b347d"
+          ],
+          "retrieved_chunk_ids": [
+            "c_cb0e6a5b347d",
+            "c_9ce977a75ea2",
+            "c_b449b160b3f1",
+            "c_32bddfadae44",
+            "c_4cdf11e75d43"
+          ],
+          "hit@5": true,
+          "reciprocal_rank": 1.0
+        },
+        {
+          "test_id": "cl_79c7b19c8b",
+          "kind": "cloze",
+          "lang": "en",
+          "gold_chunk_ids": [
+            "c_4bd85d6f7c9f"
+          ],
+          "retrieved_chunk_ids": [
+            "c_4bd85d6f7c9f",
+            "c_3b8562f47b2b",
+            "c_373e162e7eaf",
+            "c_9bea461a5308",
+            "c_2ab0dde85376"
+          ],
+          "hit@5": true,
+          "reciprocal_rank": 1.0
+        },
+        {
+          "test_id": "cl_d6c92253d9",
+          "kind": "cloze",
+          "lang": "en",
+          "gold_chunk_ids": [
+            "c_095ccf762163"
+          ],
+          "retrieved_chunk_ids": [
+            "c_095ccf762163",
+            "c_47af1fc87923",
+            "c_75a9a0e0d1fe",
+            "c_9e701b1254d4",
+            "c_c4a636b89fb8"
+          ],
+          "hit@5": true,
+          "reciprocal_rank": 1.0
+        },
+        {
+          "test_id": "cl_e9060e9218",
+          "kind": "cloze",
+          "lang": "en",
+          "gold_chunk_ids": [
+            "c_425decab30a4"
+          ],
+          "retrieved_chunk_ids": [
+            "c_425decab30a4",
+            "c_4b91a5ded1d6",
+            "c_75348a6e0588",
+            "c_223897a54989",
+            "c_dc5128b79184"
+          ],
+          "hit@5": true,
+          "reciprocal_rank": 1.0
+        }
+      ],
+      "scope_note": "Retrieval-only metrics on provided test cases. Answer accuracy/faithfulness must be evaluated separately with references and an actual answer generator."
+    },
+    "methodology": "Questions are generated from the current corpus; treat scores as an in-corpus smoke test, not a held-out benchmark. For a publishable result, create independent, human-labelled query/supporting-chunk pairs.",
+    "crosslingual": "Not included in this run. Use the dedicated Hindi-English benchmark after enabling and verifying multilingual model weights.",
+    "api_request_seconds": 0.02851,
+    "methodology_limit": "In-corpus generated questions; not held-out evaluation and not cross-domain proof."
+  },
+  "dataset_catalog": [
+    {
+      "id": "kaggle-arxiv",
+      "name": "arXiv scholarly metadata (Kaggle)",
+      "status": "Download + upload",
+      "kind": "External Kaggle dataset",
+      "license": "CC0 for metadata; papers have separate terms"
+    },
+    {
+      "id": "kaggle-energy",
+      "name": "Global sustainable energy (Kaggle full dataset)",
+      "status": "Download + upload",
+      "kind": "External Kaggle dataset",
+      "license": "CC BY 4.0"
+    },
+    {
+      "id": "kaggle-energy-sample",
+      "name": "Global sustainable energy — 20-row real-data excerpt",
+      "status": "Ready to load",
+      "kind": "Bundled Kaggle-derived excerpt",
+      "license": "CC BY 4.0; selected rows/columns adapted"
+    },
+    {
+      "id": "kaggle-delhi-climate",
+      "name": "Daily Delhi climate (Kaggle)",
+      "status": "Download + upload",
+      "kind": "External Kaggle dataset",
+      "license": "CC0 per Kaggle dataset card"
+    },
+    {
+      "id": "synthetic-cyber",
+      "name": "Cybersecurity controls (synthetic demo)",
+      "status": "Ready to load",
+      "kind": "Bundled synthetic fixture",
+      "license": "Original project fixture"
+    },
+    {
+      "id": "synthetic-biomed",
+      "name": "Biomedical research (synthetic demo)",
+      "status": "Ready to load",
+      "kind": "Bundled synthetic fixture",
+      "license": "Original project fixture"
+    },
+    {
+      "id": "synthetic-energy",
+      "name": "Energy systems (synthetic demo)",
+      "status": "Ready to load",
+      "kind": "Bundled synthetic fixture",
+      "license": "Original project fixture"
+    }
+  ],
+  "summary": {
+    "synthetic_domains_loaded": 3,
+    "600_record_dashboard_import_passed": true,
+    "formats_tested": [
+      "PDF",
+      "TXT",
+      "Markdown",
+      "CSV",
+      "JSON",
+      "JSONL/NDJSON",
+      "ZIP"
+    ],
+    "query_routes_tested": [
+      "factual",
+      "relation_chain",
+      "thematic"
+    ],
+    "all_record_update_operations_under_60_seconds": true,
+    "kaggle_derived_excerpt_ingested": true,
+    "kaggle_full_dataset_downloaded_or_ingested": false,
+    "multilingual_model_weights_loaded": false,
+    "browser_automation": "Chromium navigation was blocked by the execution environment policy; frontend JavaScript syntax and the same web API endpoints were tested independently."
+  }
+}

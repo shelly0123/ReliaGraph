@@ -1,0 +1,436 @@
+{
+  "benchmark_title": "ReliaGraph cross-domain relation-extraction smoke benchmark",
+  "notice": "Original benchmark sentences authored for this project. Labels are manually annotated. This small set is a smoke test, not a scientific claim of industry-grade generalization.",
+  "backend": "gliner",
+  "elapsed_seconds_including_model_load": 0.0119,
+  "case_count": 20,
+  "entity_candidate_count": 32,
+  "relation_candidate_count": 16,
+  "candidate_decision_counts": {
+    "review_required": 16
+  },
+  "extraction_diagnostics": {
+    "mode": "hybrid_with_fallback",
+    "input_chunks": 20,
+    "safe_chunks": 20,
+    "quarantined_chunks": 0,
+    "entity_candidates": 32,
+    "relation_candidates": 16,
+    "elapsed_seconds": 0.0118,
+    "adapters": [
+      {
+        "adapter": "gliner_relex",
+        "status": "fallback",
+        "error_type": "RuntimeError",
+        "message": "Install optional model dependencies with `pip install -r requirements-optional-models.txt`.",
+        "seconds": 0.0009
+      },
+      {
+        "adapter": "generic_pattern_fallback",
+        "status": "always_available",
+        "seconds": 0.009,
+        "entities": 32,
+        "relations": 16
+      }
+    ],
+    "candidate_decision_counts": {
+      "review_required": 16
+    },
+    "accuracy_note": "Fallback is conservative and English-cue-limited. Model scores are not truth probabilities. Use a labelled held-out set to measure per-domain precision/recall and review coverage."
+  },
+  "metrics": {
+    "overall": {
+      "tp": 15,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.9375,
+      "recall": 0.9375,
+      "f1": 0.9375,
+      "predicted": 16,
+      "gold": 16
+    },
+    "per_domain": {
+      "ecology": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "predicted": 4,
+        "gold": 4
+      },
+      "laboratory_science": {
+        "tp": 3,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.75,
+        "recall": 0.75,
+        "f1": 0.75,
+        "predicted": 4,
+        "gold": 4
+      },
+      "software_systems": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "predicted": 4,
+        "gold": 4
+      },
+      "university_operations": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "predicted": 4,
+        "gold": 4
+      }
+    },
+    "per_case": [
+      {
+        "case_id": "uni_01",
+        "domain": "university_operations",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "predicted": 1,
+        "gold": 1
+      },
+      {
+        "case_id": "uni_02",
+        "domain": "university_operations",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "predicted": 1,
+        "gold": 1
+      },
+      {
+        "case_id": "uni_03",
+        "domain": "university_operations",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "predicted": 1,
+        "gold": 1
+      },
+      {
+        "case_id": "uni_04",
+        "domain": "university_operations",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "predicted": 1,
+        "gold": 1
+      },
+      {
+        "case_id": "uni_05",
+        "domain": "university_operations",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "predicted": 0,
+        "gold": 0
+      },
+      {
+        "case_id": "soft_01",
+        "domain": "software_systems",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "predicted": 1,
+        "gold": 1
+      },
+      {
+        "case_id": "soft_02",
+        "domain": "software_systems",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "predicted": 1,
+        "gold": 1
+      },
+      {
+        "case_id": "soft_03",
+        "domain": "software_systems",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "predicted": 1,
+        "gold": 1
+      },
+      {
+        "case_id": "soft_04",
+        "domain": "software_systems",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "predicted": 1,
+        "gold": 1
+      },
+      {
+        "case_id": "soft_05",
+        "domain": "software_systems",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "predicted": 0,
+        "gold": 0
+      },
+      {
+        "case_id": "eco_01",
+        "domain": "ecology",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "predicted": 1,
+        "gold": 1
+      },
+      {
+        "case_id": "eco_02",
+        "domain": "ecology",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "predicted": 1,
+        "gold": 1
+      },
+      {
+        "case_id": "eco_03",
+        "domain": "ecology",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "predicted": 1,
+        "gold": 1
+      },
+      {
+        "case_id": "eco_04",
+        "domain": "ecology",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "predicted": 1,
+        "gold": 1
+      },
+      {
+        "case_id": "eco_05",
+        "domain": "ecology",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "predicted": 0,
+        "gold": 0
+      },
+      {
+        "case_id": "sci_01",
+        "domain": "laboratory_science",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "predicted": 1,
+        "gold": 1
+      },
+      {
+        "case_id": "sci_02",
+        "domain": "laboratory_science",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "predicted": 1,
+        "gold": 1
+      },
+      {
+        "case_id": "sci_03",
+        "domain": "laboratory_science",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "predicted": 1,
+        "gold": 1
+      },
+      {
+        "case_id": "sci_04",
+        "domain": "laboratory_science",
+        "tp": 0,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "predicted": 1,
+        "gold": 1
+      },
+      {
+        "case_id": "sci_05",
+        "domain": "laboratory_science",
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "predicted": 0,
+        "gold": 0
+      }
+    ],
+    "method": "exact_normalized_subject_predicate_object_triples",
+    "scope_note": "Scores describe only this labelled set and extractor configuration. Domain-specific and held-out-source results must be reviewed; no arbitrary-domain guarantee is implied."
+  },
+  "domain_shift_profiles": {
+    "ecology": {
+      "relation_label_jaccard": null,
+      "new_relation_labels": [
+        "absorbs",
+        "causes",
+        "produces",
+        "supports"
+      ],
+      "warnings": [],
+      "interpretation": "First domain in this run; used as an initial reference, not a gold standard."
+    },
+    "laboratory_science": {
+      "relation_label_jaccard": 0.1429,
+      "evidence_vocabulary_jaccard": 0.0645,
+      "new_relation_labels": [
+        "converts",
+        "measures",
+        "protects"
+      ],
+      "missing_relation_labels": [
+        "absorbs",
+        "causes",
+        "supports"
+      ],
+      "reference_candidate_count": 4,
+      "current_candidate_count": 4,
+      "candidate_count_ratio": 1.0,
+      "warnings": [
+        "relation_vocabulary_shift",
+        "evidence_vocabulary_shift"
+      ],
+      "interpretation": "Descriptive shift signals only. They indicate changed vocabulary or extraction behaviour; they do not prove low accuracy. Recalibrate and measure on labelled examples from the new data before enabling automatic promotion."
+    },
+    "software_systems": {
+      "relation_label_jaccard": 0.0,
+      "evidence_vocabulary_jaccard": 0.0204,
+      "new_relation_labels": [
+        "contains",
+        "requires",
+        "stores",
+        "uses"
+      ],
+      "missing_relation_labels": [
+        "absorbs",
+        "causes",
+        "converts",
+        "measures",
+        "produces",
+        "protects",
+        "supports"
+      ],
+      "reference_candidate_count": 8,
+      "current_candidate_count": 4,
+      "candidate_count_ratio": 0.5,
+      "warnings": [
+        "relation_vocabulary_shift",
+        "evidence_vocabulary_shift"
+      ],
+      "interpretation": "Descriptive shift signals only. They indicate changed vocabulary or extraction behaviour; they do not prove low accuracy. Recalibrate and measure on labelled examples from the new data before enabling automatic promotion."
+    },
+    "university_operations": {
+      "relation_label_jaccard": 0.1538,
+      "evidence_vocabulary_jaccard": 0.0469,
+      "new_relation_labels": [
+        "part_of",
+        "provides"
+      ],
+      "missing_relation_labels": [
+        "absorbs",
+        "causes",
+        "converts",
+        "measures",
+        "produces",
+        "protects",
+        "stores",
+        "supports",
+        "uses"
+      ],
+      "reference_candidate_count": 12,
+      "current_candidate_count": 4,
+      "candidate_count_ratio": 0.3333,
+      "warnings": [
+        "relation_vocabulary_shift",
+        "evidence_vocabulary_shift",
+        "candidate_yield_shift"
+      ],
+      "interpretation": "Descriptive shift signals only. They indicate changed vocabulary or extraction behaviour; they do not prove low accuracy. Recalibrate and measure on labelled examples from the new data before enabling automatic promotion."
+    }
+  },
+  "interpretation": [
+    "Use the per-domain metrics; do not rely only on the pooled score.",
+    "This is a small project-authored smoke benchmark, not independent external validation. It measures only these sentences and settings.",
+    "If an optional model or parser is unavailable, its error is recorded and the deterministic fallback runs; inspect extraction_diagnostics.adapters.",
+    "A candidate that passes source alignment is grounded in a passage, not necessarily semantically true.",
+    "No result from this dataset alone proves generalization to arbitrary domains; validate on held-out documents and an external cross-domain benchmark."
+  ]
+}

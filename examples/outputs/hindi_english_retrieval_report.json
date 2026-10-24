@@ -1,0 +1,187 @@
+{
+  "benchmark": "Original Hindi queries over English passages",
+  "notice": "Small manually labelled synthetic smoke set, not a general multilingual accuracy guarantee.",
+  "cases": 10,
+  "model_evaluation_complete": false,
+  "evaluation_status": "not_measured_model_unavailable_or_fallback_used",
+  "hit_at_1": null,
+  "mean_reciprocal_rank": null,
+  "elapsed_seconds_including_model_load": 0.0009,
+  "model_diagnostics": {
+    "mode": "lexical_fallback_limited_crosslingual",
+    "active_model": null,
+    "crosslingual_model_enabled": false,
+    "enable_secondary_model": true,
+    "failed_models": [
+      "intfloat/multilingual-e5-small",
+      "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    ],
+    "model_errors": [
+      {
+        "model": "intfloat/multilingual-e5-small",
+        "error_type": "RuntimeError",
+        "message": "Install optional model dependencies from requirements-optional-models.txt"
+      },
+      {
+        "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "error_type": "RuntimeError",
+        "message": "Install optional model dependencies from requirements-optional-models.txt"
+      }
+    ],
+    "last_fallback_note": "Multilingual models are unavailable. No general Hindi-to-English semantic capability is active; empty results are an intentional safe abstention. Enable a working local multilingual model.",
+    "last_query_seconds": 0.0,
+    "primary": {
+      "model_name": "intfloat/multilingual-e5-small",
+      "device": "cpu",
+      "load_seconds": null,
+      "last_query_seconds": 0.0,
+      "cache_path": "data/cache/hindi_english_benchmark/e5_chunks.sqlite3",
+      "model_load_attempted": true
+    },
+    "secondary": {
+      "model_name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "device": "cpu",
+      "load_seconds": null,
+      "last_query_seconds": 0.0,
+      "cache_path": "data/cache/hindi_english_benchmark/multilingual_minilm_chunks.sqlite3",
+      "model_load_attempted": true
+    },
+    "important_limit": "Lexical fallback is not a replacement for cross-lingual embeddings."
+  },
+  "path_demo_found": false,
+  "path_demo": [],
+  "results": [
+    {
+      "id": "hi_01",
+      "query_hi": "पुस्तकालय के डिजिटल संसाधनों में क्या शामिल है?",
+      "gold_chunk_ids": [
+        "c1",
+        "c2"
+      ],
+      "retrieved_chunk_ids": [],
+      "retrieval_mode": "lexical_fallback_limited_crosslingual",
+      "top1_hit": null,
+      "first_gold_rank": null,
+      "top_k_evidence": [],
+      "graph_paths": []
+    },
+    {
+      "id": "hi_02",
+      "query_hi": "प्रमाणीकरण सेवा के लिए क्या आवश्यक है?",
+      "gold_chunk_ids": [
+        "c3"
+      ],
+      "retrieved_chunk_ids": [],
+      "retrieval_mode": "lexical_fallback_limited_crosslingual",
+      "top1_hit": null,
+      "first_gold_rank": null,
+      "top_k_evidence": [],
+      "graph_paths": []
+    },
+    {
+      "id": "hi_03",
+      "query_hi": "आर्द्रभूमि किन पक्षियों को सहारा देती है?",
+      "gold_chunk_ids": [
+        "c4"
+      ],
+      "retrieved_chunk_ids": [],
+      "retrieval_mode": "lexical_fallback_limited_crosslingual",
+      "top1_hit": null,
+      "first_gold_rank": null,
+      "top_k_evidence": [],
+      "graph_paths": []
+    },
+    {
+      "id": "hi_04",
+      "query_hi": "सेंसर क्या मापता है?",
+      "gold_chunk_ids": [
+        "c5"
+      ],
+      "retrieved_chunk_ids": [],
+      "retrieval_mode": "lexical_fallback_limited_crosslingual",
+      "top1_hit": null,
+      "first_gold_rank": null,
+      "top_k_evidence": [],
+      "graph_paths": []
+    },
+    {
+      "id": "hi_05",
+      "query_hi": "अनुप्रयोग किस डेटाबेस का उपयोग करता है?",
+      "gold_chunk_ids": [
+        "c6"
+      ],
+      "retrieved_chunk_ids": [],
+      "retrieval_mode": "lexical_fallback_limited_crosslingual",
+      "top1_hit": null,
+      "first_gold_rank": null,
+      "top_k_evidence": [],
+      "graph_paths": []
+    },
+    {
+      "id": "hi_06",
+      "query_hi": "प्रयोग क्या उत्पन्न करता है?",
+      "gold_chunk_ids": [
+        "c7"
+      ],
+      "retrieved_chunk_ids": [],
+      "retrieval_mode": "lexical_fallback_limited_crosslingual",
+      "top1_hit": null,
+      "first_gold_rank": null,
+      "top_k_evidence": [],
+      "graph_paths": []
+    },
+    {
+      "id": "hi_07",
+      "query_hi": "जड़ प्रणाली क्या अवशोषित करती है?",
+      "gold_chunk_ids": [
+        "c8"
+      ],
+      "retrieved_chunk_ids": [],
+      "retrieval_mode": "lexical_fallback_limited_crosslingual",
+      "top1_hit": null,
+      "first_gold_rank": null,
+      "top_k_evidence": [],
+      "graph_paths": []
+    },
+    {
+      "id": "hi_08",
+      "query_hi": "समय-सारणी में क्या होता है?",
+      "gold_chunk_ids": [
+        "c9"
+      ],
+      "retrieved_chunk_ids": [],
+      "retrieval_mode": "lexical_fallback_limited_crosslingual",
+      "top1_hit": null,
+      "first_gold_rank": null,
+      "top_k_evidence": [],
+      "graph_paths": []
+    },
+    {
+      "id": "hi_09",
+      "query_hi": "कैश में क्या रखा जाता है?",
+      "gold_chunk_ids": [
+        "c10"
+      ],
+      "retrieved_chunk_ids": [],
+      "retrieval_mode": "lexical_fallback_limited_crosslingual",
+      "top1_hit": null,
+      "first_gold_rank": null,
+      "top_k_evidence": [],
+      "graph_paths": []
+    },
+    {
+      "id": "hi_10",
+      "query_hi": "झिल्ली कोशिका के लिए क्या करती है?",
+      "gold_chunk_ids": [
+        "c11"
+      ],
+      "retrieved_chunk_ids": [],
+      "retrieval_mode": "lexical_fallback_limited_crosslingual",
+      "top1_hit": null,
+      "first_gold_rank": null,
+      "top_k_evidence": [],
+      "graph_paths": []
+    }
+  ],
+  "next_step": "Run after at least one multilingual model loads successfully, then evaluate 30+ manually checked Hindi/English pairs. When only lexical fallback is active, metrics are intentionally null rather than misreporting same-language overlap as cross-lingual performance."
+}

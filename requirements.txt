@@ -1,0 +1,8 @@
+numpy>=1.26,<3
+scipy>=1.11,<2
+scikit-learn>=1.4,<2
+pypdf>=4.0,<7
+networkx>=3.2,<4
+streamlit>=1.35,<2
+plotly>=5.20,<7
+pytest>=8,<10

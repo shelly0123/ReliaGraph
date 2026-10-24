@@ -1,0 +1,413 @@
+{
+  "benchmark": "ReliaGraph unified pipeline on paraphrased MUJ source-fact corpus",
+  "notice": "The statements below are short, independently phrased summaries of public factual information from official MUJ webpages. They are not official MUJ statements, not official policy text, and not endorsed by MUJ. The corpus does not reproduce full webpage passages or images. Follow the linked pages for authoritative current wording and details.",
+  "method": {
+    "algorithm_specific_muj_terms_supplied": false,
+    "optional_models_enabled": false,
+    "each_fact_as_input_record": true,
+    "source_provenance_preserved": true,
+    "gold_edge_match": "exact normalized subject-relation-object; semantic synonyms do not count as matches"
+  },
+  "dataset": {
+    "dataset_id": "topicweave-muj-paraphrased-public-facts-v1",
+    "facts": 22,
+    "sources": 4,
+    "gold_relations": 22,
+    "type": "short, independently paraphrased public facts with a manually curated gold-edge list",
+    "independent_holdout": false
+  },
+  "runtime": {
+    "wall_clock_seconds": 0.201539,
+    "stage_timings_seconds": {
+      "ingestion": 0.01879990999987058,
+      "topics": 0.10016949100008787,
+      "retrieval_index": 0.03060001199992257,
+      "graph_update": 0.039765465000073164,
+      "reports": 0.011494596999909845,
+      "total": 0.20148656299988943
+    },
+    "note": "Current development host; no model inference or full PDF parsing. Re-measure on target laptop."
+  },
+  "graph": {
+    "documents": 22,
+    "chunks": 22,
+    "topics": 3,
+    "nodes": 28,
+    "edges_including_derived_topic_links": 63,
+    "factual_relation_predictions": 21,
+    "estimated_graph_bytes": 53819
+  },
+  "exact_relation_metrics": {
+    "tp": 20,
+    "fp": 1,
+    "fn": 2,
+    "precision": 0.9524,
+    "recall": 0.9091,
+    "f1": 0.9302,
+    "true_positive_triples": [
+      [
+        "academic offerings",
+        "includes",
+        "architecture"
+      ],
+      [
+        "academic offerings",
+        "includes",
+        "engineering"
+      ],
+      [
+        "academic offerings",
+        "includes",
+        "law"
+      ],
+      [
+        "academic offerings",
+        "includes",
+        "management"
+      ],
+      [
+        "academic rules and regulations",
+        "includes",
+        "attendance monitoring guidance"
+      ],
+      [
+        "academic rules and regulations",
+        "includes",
+        "policy on plagiarism"
+      ],
+      [
+        "academic rules and regulations",
+        "includes",
+        "student code of ethics and conduct"
+      ],
+      [
+        "assessment",
+        "includes",
+        "assignment work"
+      ],
+      [
+        "assessment",
+        "includes",
+        "class participation"
+      ],
+      [
+        "assessment",
+        "includes",
+        "class tests"
+      ],
+      [
+        "assessment",
+        "includes",
+        "end semester examinations"
+      ],
+      [
+        "assessment",
+        "includes",
+        "laboratory work"
+      ],
+      [
+        "manipal university jaipur",
+        "follows",
+        "semester system"
+      ],
+      [
+        "manipal university jaipur",
+        "has",
+        "central library"
+      ],
+      [
+        "manipal university jaipur",
+        "has",
+        "research laboratories"
+      ],
+      [
+        "manipal university jaipur",
+        "is a",
+        "multidisciplinary university"
+      ],
+      [
+        "manipal university jaipur",
+        "offers",
+        "doctoral programmes"
+      ],
+      [
+        "manipal university jaipur",
+        "offers",
+        "postgraduate programmes"
+      ],
+      [
+        "manipal university jaipur",
+        "offers",
+        "undergraduate programmes"
+      ],
+      [
+        "manipal university jaipur",
+        "uses",
+        "continuous and comprehensive evaluation"
+      ]
+    ],
+    "false_positive_triples": [
+      [
+        "manipal university jaipur",
+        "supports",
+        "international collaborations"
+      ]
+    ],
+    "false_negative_triples": [
+      [
+        "assessment",
+        "includes",
+        "quizzes"
+      ],
+      [
+        "manipal university jaipur",
+        "enables",
+        "international collaborations"
+      ]
+    ],
+    "caveat": "Development smoke-set score only. The corpus/labels were available during development, the set is small, and exact label matching treats paraphrase/synonym differences as errors. Do not call this held-out or industry-grade generalization."
+  },
+  "query_demos": [
+    {
+      "question": "What are the main themes across these documents?",
+      "route": "thematic",
+      "answer": "Main themes detected in the indexed collection: University / Jaipur / Manipal; Academic / Include / Offerings; Assessment / Includes / Class. Each theme is derived from topic clustering; inspect its linked source passages before treating the label as definitive.",
+      "hit_count": 3,
+      "graph_path_count": 3,
+      "source_chunk_ids": [
+        "c_a4f06d2e3563",
+        "c_bedead079aa7",
+        "c_00d885324be7"
+      ],
+      "note": "Qualitative smoke outputs; not a human-rated answer-quality benchmark."
+    },
+    {
+      "question": "What types of programmes does Manipal University Jaipur offer?",
+      "route": "factual",
+      "answer": "Manipal University Jaipur offers undergraduate programmes. [Source chunk: c_1536cad1f6f0]",
+      "hit_count": 5,
+      "graph_path_count": 0,
+      "source_chunk_ids": [
+        "c_1536cad1f6f0",
+        "c_60549fca4d60",
+        "c_9816f77e960b",
+        "c_a4f06d2e3563",
+        "c_62b61e3700a0"
+      ],
+      "note": "Qualitative smoke outputs; not a human-rated answer-quality benchmark."
+    },
+    {
+      "question": "How are assessment and examinations connected?",
+      "route": "relation_chain",
+      "answer": "Source-backed graph path (explanatory, not a proof): Assessment → includes end-semester examinations",
+      "hit_count": 5,
+      "graph_path_count": 4,
+      "source_chunk_ids": [
+        "c_edceb00d968b",
+        "c_6ec042405529",
+        "c_00d885324be7",
+        "c_33fb1f73f370",
+        "c_e81c9964c3e9"
+      ],
+      "note": "Qualitative smoke outputs; not a human-rated answer-quality benchmark."
+    }
+  ],
+  "predicted_relations": [
+    {
+      "subject": "Assessment",
+      "relation": "includes",
+      "object": "assignment work",
+      "evidence_chunk_ids": [
+        "c_261aa2e55622"
+      ],
+      "status": "review_required"
+    },
+    {
+      "subject": "Academic rules and regulations",
+      "relation": "includes",
+      "object": "policy on plagiarism",
+      "evidence_chunk_ids": [
+        "c_4343d9b0ea8c"
+      ],
+      "status": "review_required"
+    },
+    {
+      "subject": "Assessment",
+      "relation": "includes",
+      "object": "end-semester examinations",
+      "evidence_chunk_ids": [
+        "c_edceb00d968b"
+      ],
+      "status": "review_required"
+    },
+    {
+      "subject": "Manipal University Jaipur",
+      "relation": "has",
+      "object": "central library",
+      "evidence_chunk_ids": [
+        "c_3f9bab0056fe"
+      ],
+      "status": "review_required"
+    },
+    {
+      "subject": "Academic offerings",
+      "relation": "includes",
+      "object": "engineering",
+      "evidence_chunk_ids": [
+        "c_bedead079aa7"
+      ],
+      "status": "review_required"
+    },
+    {
+      "subject": "Assessment",
+      "relation": "includes",
+      "object": "laboratory work",
+      "evidence_chunk_ids": [
+        "c_e81c9964c3e9"
+      ],
+      "status": "review_required"
+    },
+    {
+      "subject": "Assessment",
+      "relation": "includes",
+      "object": "class tests",
+      "evidence_chunk_ids": [
+        "c_33fb1f73f370"
+      ],
+      "status": "review_required"
+    },
+    {
+      "subject": "Assessment",
+      "relation": "includes",
+      "object": "class participation",
+      "evidence_chunk_ids": [
+        "c_00d885324be7"
+      ],
+      "status": "review_required"
+    },
+    {
+      "subject": "Academic rules and regulations",
+      "relation": "includes",
+      "object": "attendance monitoring guidance",
+      "evidence_chunk_ids": [
+        "c_2fc98c4c7249"
+      ],
+      "status": "review_required"
+    },
+    {
+      "subject": "Manipal University Jaipur",
+      "relation": "offers",
+      "object": "doctoral programmes",
+      "evidence_chunk_ids": [
+        "c_9816f77e960b"
+      ],
+      "status": "review_required"
+    },
+    {
+      "subject": "Manipal University Jaipur",
+      "relation": "follows",
+      "object": "semester system",
+      "evidence_chunk_ids": [
+        "c_62b61e3700a0"
+      ],
+      "status": "review_required"
+    },
+    {
+      "subject": "Manipal University Jaipur",
+      "relation": "offers",
+      "object": "postgraduate programmes",
+      "evidence_chunk_ids": [
+        "c_60549fca4d60"
+      ],
+      "status": "review_required"
+    },
+    {
+      "subject": "Manipal University Jaipur",
+      "relation": "is_a",
+      "object": "multidisciplinary university",
+      "evidence_chunk_ids": [
+        "c_a4f06d2e3563"
+      ],
+      "status": "review_required"
+    },
+    {
+      "subject": "Manipal University Jaipur",
+      "relation": "supports",
+      "object": "international collaborations",
+      "evidence_chunk_ids": [
+        "c_97bda4a21951"
+      ],
+      "status": "review_required"
+    },
+    {
+      "subject": "Manipal University Jaipur",
+      "relation": "offers",
+      "object": "undergraduate programmes",
+      "evidence_chunk_ids": [
+        "c_1536cad1f6f0"
+      ],
+      "status": "review_required"
+    },
+    {
+      "subject": "Academic offerings",
+      "relation": "includes",
+      "object": "management",
+      "evidence_chunk_ids": [
+        "c_73eef6e55531"
+      ],
+      "status": "review_required"
+    },
+    {
+      "subject": "Academic offerings",
+      "relation": "includes",
+      "object": "architecture",
+      "evidence_chunk_ids": [
+        "c_f30519283e7a"
+      ],
+      "status": "review_required"
+    },
+    {
+      "subject": "Academic rules and regulations",
+      "relation": "includes",
+      "object": "student code of ethics and conduct",
+      "evidence_chunk_ids": [
+        "c_cec1ef0de596"
+      ],
+      "status": "review_required"
+    },
+    {
+      "subject": "Manipal University Jaipur",
+      "relation": "has",
+      "object": "research laboratories",
+      "evidence_chunk_ids": [
+        "c_64c0f470b14c"
+      ],
+      "status": "review_required"
+    },
+    {
+      "subject": "Academic offerings",
+      "relation": "includes",
+      "object": "law",
+      "evidence_chunk_ids": [
+        "c_d0f4a6a185ca"
+      ],
+      "status": "review_required"
+    },
+    {
+      "subject": "Manipal University Jaipur",
+      "relation": "uses",
+      "object": "continuous and comprehensive evaluation",
+      "evidence_chunk_ids": [
+        "c_381577e709c9"
+      ],
+      "status": "review_required"
+    }
+  ],
+  "limitations": [
+    "MUJ-themed corpus is a demo only; no official endorsement is implied.",
+    "Source facts are independently phrased summaries, not copied full webpage passages.",
+    "Small corpus is not sufficient to judge topic clustering quality statistically.",
+    "The same corpus has been used for development and is not a held-out test set.",
+    "Cross-lingual inference is not tested by this script."
+  ]
+}
