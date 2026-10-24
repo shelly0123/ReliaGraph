@@ -91,7 +91,7 @@ For spaCy's English parser, additionally run `python -m spacy download en_core_w
 
 Weights are not bundled. They may download on first use. For Hindi over English data, if multilingual model inference is unavailable, the engine intentionally abstains instead of treating shared Latin words as successful translation.
 
-## Member 3 integration API
+##Integration API
 
 ```python
 from pipeline import TopicWeaveEngine
@@ -143,7 +143,7 @@ Key result fields:
 
 ## Project files
 
-- `models.py`: shared Member 1/2/3 contracts.
+- `models.py`: shared Member contracts.
 - `pipeline.py`: unified orchestration API.
 - `core/registry.py`, `core/chunking.py`, `core/topics.py`, `core/retrieval.py`: ingestion/topic/retrieval layer.
 - `core/phase2/`: incremental knowledge base, security, cross-lingual retrieval, routing, evaluation and extraction adapters.
