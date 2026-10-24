@@ -1,4 +1,4 @@
-# ReliaGraph — Unified Phase 1 + Phase 2 Prototype
+# ReliaGraph
 
 **Interactive Knowledge Base — Topic-Augmented Knowledge Graph Builder**
 
